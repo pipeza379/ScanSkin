@@ -1,9 +1,9 @@
-import React, { Component,useState } from "react"
+import React, { useState } from "react"
 import { Col, Row, Pagination } from "antd"
 import '../../asset/css/allproduct.css'
 import * as data from './data'
 
-var { products: all_products, hot_products, fake_products } = data
+const { products: all_products, hot_products, fake_products } = data
 const TOTAL = fake_products.length
 const PAGESIZE = 40
 
@@ -20,12 +20,13 @@ function filterProducts(pageNumber) {
     return products_next_page
 }
 
-function createTable(products,name){
+function createTable(products, name, title) {
     let table = []
     let x = 1
     products.forEach(d => {
         table.push(
             <div className={`${name}${x}`} key={x}>
+                {/* <img src={d.img} alt="product"/> */}
                 <h6>{d.name}</h6>
             </div>
         )
@@ -35,6 +36,7 @@ function createTable(products,name){
         <div>
             <Row align="middle">
                 <Col md={{ span: 18, offset: 3 }}>
+                    <h2 className={`h2-${name}`}>{title}</h2>
                     <div className={name}>
                         {table}
                     </div>
@@ -44,86 +46,33 @@ function createTable(products,name){
     )
 }
 
-const AllProduct = ()=>{
-    const {total,setTotal} = useState(TOTAL)
-    const {current,setPage} = useState(1)
-    const {products,setProduct} = useState(filterProducts(1))
-}
-
-class AllProduct extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            total: TOTAL,
-            current_page: 1,
-            products_page: filterProducts(1),
-        };
-    }
-
-    createTable = (products, name = "item", page = 0) => {
-        let table = []
-        let classname = name === "hot" ? "hot-products" : "all-products"
-
-        let x = 1
-        products.forEach(d => {
-            table.push(
-                <div className={`${name}${x}`} key={x}>
-                    <h6>{d.name}</h6>
-                </div>
-            )
-            x += 1
-        })
-        return (
-            <div>
-                <Row align="middle">
-                    <Col md={{ span: 18, offset: 3 }}>
-                        {name === "hot" && <h2 style={{ textAlign: "center" }}>สินค้ายอดฮิต</h2>}
-                        {name !== "hot" && <h2>ผลิตภัณฑ์ทั้งหมด</h2>}
-                        <div className={classname}>
-                            {table}
-                        </div>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
-
-    changePage = pageNumber => {
+function AllProduct() {
+    const [current, setPage] = useState(1)
+    const [products, setProduct] = useState(filterProducts(1))
+    function changePage(pageNumber) {
         console.log(pageNumber)
-        let products_next_page = filterProducts(pageNumber)
-        this.setState({
-            current_page: pageNumber,
-            products_page: products_next_page
-        })
+        setPage(pageNumber)
+        setProduct(filterProducts(pageNumber))
     }
+    return (
+        <div>
+            {current === 1 && createTable(hot_products, "hot-products", "ผลิตภัณฑ์ยอดฮิต")}
+            {createTable(products, "all-products", "ผลิตภัณฑ์ทั้งหมด")}
+            <br />
+            <Row align="middle">
+                <Col md={{ span: 12, offset: 6 }} align="middle">
+                    <Pagination
+                        size="small"
+                        defaultCurrent={1}
+                        showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
+                        total={TOTAL}
+                        pageSize={PAGESIZE}
+                        onChange={changePage}
+                    />
+                </Col>
+            </Row>
+        </div>
+    )
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.state.current_page !== nextState.current_page
-    }
-
-    render() {
-        return (
-            <div>
-                {/* {console.log(PAGESIZE)} */}
-                {this.state.current_page === 1 && this.createTable(hot_products, "hot")}
-                {/* {this.createTable(all_products, "item", 1)} */}
-                {this.createTable(this.state.products_page, "item")}
-                <br />
-                <Row align="middle">
-                    <Col md={{ span: 12, offset: 6 }} align="middle">
-                        <Pagination
-                            size="small"
-                            defaultCurrent={1}
-                            showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
-                            total={this.state.total}
-                            pageSize={PAGESIZE}
-                            onChange={this.changePage}
-                        />
-                    </Col>
-                </Row>
-            </div>
-        );
-    }
 }
-
-export default AllProduct;
+export default AllProduct
