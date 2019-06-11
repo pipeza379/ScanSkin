@@ -1,25 +1,27 @@
-.all-products{
+.all-products {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-gap: 10px;
 }
+
 .all-products div {
     border: 1px solid black;
     padding: 10px;
 }
 
-.hot-products{
+.hot-products {
     margin-bottom: 20px;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     border: 20px solid pink;
     padding: 15px;
     /* border-inline: 10px solid pink; */
 }
+
 .hot-products div {
     border: 1px solid black;
     padding: 10px;

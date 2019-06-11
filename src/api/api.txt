@@ -1,0 +1,26 @@
+{
+    "img":"ผลิตภัณฑ์", link
+    "brand":"แบรนด์",
+    "rating":"ความนิยม",
+    "name":"ชื่อผลิตภัณฑ์",
+    "type":"ประเภท",
+    "properties": "คุณสมบัติ",
+    "using":"วิธีการใช้",
+    "quantities":"ปริมาณ",
+    "price":"ราคา"
+}
+
+    {
+        id: ,
+        img: ,
+        name: ,
+        brand: ,
+        type: ,
+        hot: ,
+        detail: {
+            rating: ,
+            price: ,
+            quantities: ,
+            using: , 
+        },
+    }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Select, Row, Col } from 'antd'
+import {Link} from 'react-router-dom'
 import mylogo from '../data/img/mylogo.png'
 import '../asset/css/head.css'
 
@@ -9,7 +10,7 @@ class HeadBar extends Component {
             <div className="head-bar">
                 <Row type="flex" align="middle">
                     <Col span={3} align="middle">
-                        <img src={mylogo} alt="logo" />
+                        <Link to="/"><img src={mylogo} alt="logo" /></Link>
                     </Col>
                     <Col span={18}>
                         <Select style={{ width: "100%" }} />

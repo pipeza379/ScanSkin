@@ -1,3 +1,5 @@
+var faker = require('faker')
+
 export const products = [
     {
         index: 1,
@@ -9,7 +11,6 @@ export const products = [
             brand: "",
             price: 100,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -27,7 +28,6 @@ export const products = [
             brand: "",
             price: 150,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -46,7 +46,6 @@ export const products = [
             brand: "",
             price: 70,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -65,7 +64,6 @@ export const products = [
             brand: "",
             price: 130,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -84,7 +82,6 @@ export const products = [
             brand: "",
             price: 100,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -102,7 +99,6 @@ export const products = [
             brand: "",
             price: 150,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -121,7 +117,6 @@ export const products = [
             brand: "",
             price: 70,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -140,7 +135,6 @@ export const products = [
             brand: "",
             price: 130,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -159,7 +153,6 @@ export const products = [
             brand: "",
             price: 100,
             quantities: "10g",
-            skin: "",
             using: "ss"
         },
         filter: [
@@ -175,3 +168,18 @@ function filterHotProduct() {
 }
 
 export const hot_products = filterHotProduct()
+
+function faker_products() {
+    let products = []
+    for (let i = 0; i < 100; i++) {
+        products.push(
+            {
+                index: i + 1,
+                img: faker.image.image(),
+                name: faker.name.firstName() + " " + faker.name.lastName()
+            }
+        )
+    }
+    return products
+}
+export const fake_products = faker_products()

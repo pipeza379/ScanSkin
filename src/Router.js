@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './route/home/home'
-import Compare from './route/compare/compare'
-import Review from './route/review/review'
-import Brand from './route/brand/brand'
-import Product from './route/product/allproduct'
+import Home from './route/home'
+import Compare from './route/compare'
+import Review from './route/review'
+import Brand from './route/brand'
+import Product from './route/product'
 
-// import logo from './data/img/mylogo.png'
+import Header from './features/head'
 
 class Rounter extends Component {
   render() {
     return (
       <div>
-        {/* <img src={logo} alt="logo" /> */}
+        <Header/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/compare" component={Compare} />
