@@ -1,6 +1,5 @@
 import React, { Component,useState } from "react"
 import { Col, Row, Pagination } from "antd"
-// import { ceil } from "mathjs"
 import '../../asset/css/allproduct.css'
 import * as data from './data'
 
@@ -19,6 +18,36 @@ function filterProducts(pageNumber) {
         products_next_page.push(fake_products[i])
     }
     return products_next_page
+}
+
+function createTable(products,name){
+    let table = []
+    let x = 1
+    products.forEach(d => {
+        table.push(
+            <div className={`${name}${x}`} key={x}>
+                <h6>{d.name}</h6>
+            </div>
+        )
+        x += 1
+    })
+    return (
+        <div>
+            <Row align="middle">
+                <Col md={{ span: 18, offset: 3 }}>
+                    <div className={name}>
+                        {table}
+                    </div>
+                </Col>
+            </Row>
+        </div>
+    )
+}
+
+const AllProduct = ()=>{
+    const {total,setTotal} = useState(TOTAL)
+    const {current,setPage} = useState(1)
+    const {products,setProduct} = useState(filterProducts(1))
 }
 
 class AllProduct extends Component {
