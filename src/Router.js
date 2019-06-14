@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
+import {Home,Compare,Review,Brand,Select,Product} from './common'
 
-import Home from './route/home'
-import Compare from './route/compare'
-import Review from './route/review'
-import Brand from './route/brand'
-import Product from './route/product'
-
-import Header from './features/head'
+import Header from './features/Head'
 
 class Rounter extends Component {
+  
   render() {
     return (
       <div>
@@ -20,6 +16,7 @@ class Rounter extends Component {
           <Route exact path="/brand" component={Brand} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/allproduct" component={Product} />
+          <Route exact path="/select" component={Select}/>
         </Switch>
       </div>
     )

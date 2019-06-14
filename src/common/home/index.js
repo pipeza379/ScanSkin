@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Row, Col, Carousel, Button } from 'antd'
 import { Link } from 'react-router-dom'
 
-import SearchInput from '../../features/serch'
+import SearchInput from '../../features/Serch'
 // import Compare from '../compare/compare'
 // import Brand from '../brand/brand'
 
