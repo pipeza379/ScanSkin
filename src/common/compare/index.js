@@ -41,7 +41,7 @@ class Compare extends Component {
 
   render() {
     const filterProduct = products.map(product => {
-      let { img, name, rating, type, brand, price, quantities, skin, using } = product
+      let { img, name, rating, type, brand, price, quantities, using } = product
       // let { brand, price, quantities, skin, using } = description
       return ({
         img,

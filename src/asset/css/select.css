@@ -1,6 +1,7 @@
 .select {
     border: 1px solid black;
     height: 1500px;
+
 }
 
 .select-box {
@@ -8,4 +9,32 @@
     padding: 10px;
     height: 100px;
     border: 1px solid red;
+}
+
+.select .brand-products{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3,200px);
+    grid-gap: 10px;
+    /* grid-auto-rows: 200px; */
+    /* border: 2px solid pink; */
+}
+
+.test[toggle="true"]{
+    background-color: black;
+    color:white;
+}
+
+.test-correct{
+    z-index: 12;
+    position: absolute;
+}
+
+.test-logo{
+    z-index: 10;
+    position: absolute;
+}
+
+.collape{
+    position: relative;
 }
