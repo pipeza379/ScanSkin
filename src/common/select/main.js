@@ -59,7 +59,7 @@ class Main extends Component {
                         test
                     </div>
                     <div className="collape" onClick={this.toggle} toggle="false">
-                        <img className="test-logo" src={brand[0].src} index="0" onClick={this.hiddenIMG} />
+                        <img className="test-logo" src={brand[0].src} style={{width:"100%"}}index="0" onClick={this.hiddenIMG} />
                         {this.state.brand[0].toggle && <img className="test-correct" onClick={this.hiddenIMG} index="0" src={correct} />}
                     </div>
                 </div>
