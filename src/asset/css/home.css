@@ -1,27 +1,68 @@
+.home {
+    display: block;
+    margin: auto;
+    width: 1280px;
+}
+
+.select-type-home,.select-brands-home{
+    margin:20px 0;
+}
+
+
 header>.compare-head, header>.select-head {
     display: inline-block;
+    margin: 0;
 }
 
 header>.compare-detail, header>.select-detail {
     margin-left: 15px;
 }
 
+.goto-allproducts {
+    margin:10px;
+    float: right;
+    font-family: "Prompt";
+    font-size: 28px;
+    font-weight: 100;
+    color: #807E7E;
+    text-decoration: underline;
+}
+
+.fontth {
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    color: #707070;
+}
+
+h2 {
+    text-shadow: 1px black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 58px;
+    color: #707070;
+}
+
+/* TYPE */
+
 .select-type {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    height: 200px;
-    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(8, 155px);
+    grid-template-rows: 160px;
+    grid-gap: 5px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .img-type {
-    margin: 5px;
     position: relative;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     border-radius: 25px;
     border: 1px solid #707070;
 }
-
 
 .img-center {
     position: absolute;
@@ -33,22 +74,66 @@ header>.compare-detail, header>.select-detail {
 }
 
 .type-name {
-    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     text-align: center;
+    color: #707070;
+    font-size: 20px;
+    font-weight: 500;
 }
 
+/* BRANDS */
+
 .select-brands {
-    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(7, 180px);
-    grid-template-rows: repeat(4, 180px);
-    grid-gap: 10px;
-    background-color: #C0E8E7
+    grid-template-columns: repeat(7, 168px);
+    grid-template-rows: repeat(3, 168px);
+    grid-gap: 5px;
+    justify-content: center;
 }
 
 .overlap {
-    height: 180px;
-    width: 180px;
+    height: 168px;
+    width: 168px;
     position: absolute;
-    margin:auto;
+    margin: auto;
+}
+
+.choose {
+    background-color: rgba(92, 92, 92, 0.233);
+    z-index: 12;
+}
+
+.compare-btn {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: pink;
+}
+
+.compare-home {
+    padding: 20px;
+    background-color: #C0E8E7;
+}
+
+@media only screen and (max-width:1280px) {
+    .home {
+        widows: 100vw;
+    }
+    .content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .select-type {
+        grid-template-columns: repeat(4, 160px);
+        grid-template-rows: 180px 180px;
+    }
 }

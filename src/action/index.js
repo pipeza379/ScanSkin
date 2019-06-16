@@ -1,5 +1,10 @@
 //action type
-export default class Action{
+export default class Action {
     //Common Select
     static GETHEIGHT = "GETHEIGHT"
+
+    //set compare
+    static SELECTTYPE = "SELECTTYPE"
+    static SELECTBRANDS = "SELECTBRANDS"
+    static CLEAR = "CLEAR"
 }

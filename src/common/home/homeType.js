@@ -1,15 +1,17 @@
 import React, { Component } from "react"
-import { Row, Col } from "antd"
+import { connect } from "react-redux"
+import Action from '../../action'
+
 import TYPES from './type'
 import choose from '../../asset/img/select.svg'
 
 
-class HomeSelect extends Component {
+class HomeType extends Component {
     constructor() {
         super()
         this.state = {
             types: [...TYPES],
-            select: {},  
+            select: {},
         };
     }
 
@@ -21,16 +23,19 @@ class HomeSelect extends Component {
         let index = element.target.getAttribute("index")
         let { toggle, name } = this.state.types[index]
         let new_types = this.state.types
-        new_types.map((e) => {
-            e.toggle = false
-        })
-        new_types[index].toggle = !toggle
+        //want false->true 
+        toggle = !toggle
+        if (toggle) {
+            //set all toggle to false
+            new_types.map((e) => e.toggle = false)
+            this.props.setType(name)
+        }
+        else
+            this.props.setType("")
+
+        new_types[index].toggle = toggle
         this.setState({
             types: new_types,
-            select: {
-                ...this.state.select,
-                brand:name,
-            }
         })
     }
 
@@ -39,20 +44,16 @@ class HomeSelect extends Component {
         let type = []
         for (let i = 0; i < 8; i++) {
             type.push(
-                <Col className="select-type" key={`type-${i}`} lg={{ span: 3 }} md={{ span: 6 }}>
+                <div>
                     <div className="img-type">
                         <img alt={types[i].name} src={types[i].src} onClick={this.hiddenCheck} index={i} className="img-center" />
                         {this.state.types[i].toggle && <img alt="choose" src={choose} onClick={this.hiddenCheck} index={i} className="img-center" />}
                     </div>
-                    <h4 className="type-name">{types[i].name}</h4>
-                </Col >
+                    <h6 className="type-name">{types[i].name}</h6>
+                </div>
             )
         }
-        return (
-            <Row gutter={8} align="middle" type="flex" justify="center" >
-                {type}
-            </Row>
-        )
+        return (<div className="select-type">{type}</div>)
     }
 
 
@@ -60,8 +61,8 @@ class HomeSelect extends Component {
         return (
             <>
                 <header className="select-type-home">
-                    <h1 className="select-head">SELECT</h1>
-                    <span className="select-detail">เลือกประเภทผลิตภัณฑ์ที่คุณต้องการเปรียบเทียบ</span>
+                    <h2 className="select-head">SELECT</h2>
+                    <span className="select-detail fontth">เลือกประเภทผลิตภัณฑ์ที่คุณต้องการเปรียบเทียบ</span>
                 </header>
                 {this.createType()}
             </>
@@ -69,4 +70,11 @@ class HomeSelect extends Component {
     }
 }
 
-export default HomeSelect
+const mapDispatchToProps = dispatch => ({
+    setType: (name) => dispatch({ type: Action.SELECTTYPE, name }),
+})
+const mapStateToProps = state => ({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeType)

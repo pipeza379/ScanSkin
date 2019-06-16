@@ -7,7 +7,7 @@ import CLEANSER from '../../asset/img/typesvg/cleanser.svg'
 import SUNSCREEN from '../../asset/img/typesvg/sunscreen.svg'
 import MASK from '../../asset/img/typesvg/mask.svg'
 
-const TYPE = ["TONNER", "MOSITURIZER", "ESSENCE", "SERUME", "NIGHTCREAME", "CLEANSER", "SUNSCREEN", "MASK"]
+const TYPE = ["TONNER", "MOSITURIZER", "ESSENCE", "SERUME", "NIGHT CREAME", "CLEANSER", "SUNSCREEN", "MASK"]
 const IMGTYPE = [TONNER, MOSITURIZER, ESSENCE, SERUME, NIGHTCREAME, CLEANSER, SUNSCREEN, MASK]
 
 //example
