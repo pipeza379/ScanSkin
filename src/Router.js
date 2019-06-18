@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import {Home,Compare,Review,SelectProducts,Select,Product} from './common'
+import {Home,Compare,Review,SelectProducts,Select,Product} from './components'
 
 import Header from './features/Head'
 

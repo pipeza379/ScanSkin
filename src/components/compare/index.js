@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Link} from "react-router-dom"
 import { Row, Col, Typography } from "antd"
 import '../../asset/css/compare.css'
-import props from './props.json.js'
+import props from './props.json'
 import {products} from './data'
 
 const { Text } = Typography
