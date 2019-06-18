@@ -9,9 +9,9 @@ class Product extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <h1>Product</h1>
-      </React.Fragment>
+      <>
+        <h1>ผลการค้นหา</h1>
+      </>
     );
   }
 }

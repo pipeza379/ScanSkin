@@ -72,7 +72,7 @@ class HomeBrands extends Component {
     checkCompare = () => {
         let { getBrand, getType } = this.props
         if (getBrand !== [] && getType !== "")
-            return <Link to="./compare"><button className="compare-btn">เปรียบเทียบ</button></Link>
+            return <Link to="./selectproducts"><button className="compare-btn">เปรียบเทียบ</button></Link>
         else
             return <button className="compare-btn">เปรียบเทียบ</button>
     }
