@@ -39,39 +39,13 @@ div.title-type>h1 {
     margin: 20px;
 }
 
-/* SELECT SKIN TYPE */
+/* BRAND FILTER */
 
-.select-skin-type {
+.brand-filter .filter {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.brand-filter .filter .select-filter {
     text-align: center;
-    font-family: "Prompt";
-}
-
-.select-skin-type span.title {
-    font-size: 20px;
-    margin: 0 20px;
-    vertical-align: middle;
-}
-
-.select-skin {
-    border: 1px solid #707070;
-    border-left: none;
-    width: 140px;
-    height: 50px;
-    margin: auto;
-    display: inline-block;
-}
-.select-skin[skin="normal"]{
-    border-left: 1px solid #707070;
-}
-
-.select-skin::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
-
-.select-skin[click="true"] {
-    background-color: #c4c4c4;
-    color: white;
 }

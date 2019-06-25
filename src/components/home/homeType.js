@@ -44,7 +44,7 @@ class HomeType extends Component {
         let type = []
         for (let i = 0; i < 8; i++) {
             type.push(
-                <div>
+                <div key={i}>
                     <div className="img-type">
                         <img alt={types[i].name} src={types[i].src} onClick={this.hiddenCheck} index={i} className="img-center" />
                         {this.state.types[i].toggle && <img alt="choose" src={choose} onClick={this.hiddenCheck} index={i} className="img-center" />}

@@ -1,0 +1,35 @@
+/* FILTER */
+.filter {
+    text-align: center;
+    font-family: "Prompt";
+}
+
+.filter span.title-filter {
+    font-size: 20px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.select-filter {
+    border: 1px solid #707070;
+    border-left: none;
+    width: 140px;
+    height: 50px;
+    margin: auto;
+    display: inline-block;
+}
+.select-filter[index="0"]{
+    border-left: 1px solid #707070;
+}
+
+.select-filter::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.select-filter[click="true"] {
+    background-color: #c4c4c4;
+    color: white;
+}

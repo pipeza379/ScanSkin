@@ -1,8 +1,8 @@
 import React from 'react'
 import { Select, Row, Col } from 'antd'
 import { Link } from 'react-router-dom'
-import mylogo from '../data/img/mylogo.png'
-import '../asset/css/head.css'
+import mylogo from '../../data/img/mylogo.png'
+import './head.css'
 
 const HeadBar = () => {
     return (
