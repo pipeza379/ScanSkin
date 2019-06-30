@@ -22,7 +22,7 @@ class Filter extends Component {
     selectFilter = (element) => {
         let click = element.target.getAttribute("click") === "false" ? "true" : "false"
         element.target.setAttribute("click", click)
-        let select = element.target.getAttribute("index")
+        let select = element.target.getAttribute("index") //"index" pointing index position
         this.props.select(parseInt(select), click)
     }
 

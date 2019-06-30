@@ -14,7 +14,7 @@ class HomeBrands extends Component {
     }
 
     hiddenCheck = (element) => {
-        let select_brands = this.props.getBrand
+        let select_brands = [...this.props.getBrand]
         let index = element.target.getAttribute("index")
         let { toggle, name } = this.state.brands[index]
         let new_brands = this.state.brands
@@ -99,7 +99,7 @@ const mapDispatchToProps = dispatch => ({
 })
 const mapStateToProps = state => ({
     getBrand: state.compare.select_brand,
-    getType: state.compare.select_type
+    getType: state.compare.select_product_type
 })
 
 

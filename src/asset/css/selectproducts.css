@@ -49,3 +49,22 @@ div.title-type>h1 {
 .brand-filter .filter .select-filter {
     text-align: center;
 }
+
+/* PRODUCT AFTER FILTER */
+
+.product-filter {
+    display: flex;
+    margin: 20px 40px;
+}
+
+.product-filter .product {
+    margin: 10px;
+    width: 200px;
+}
+
+.product-filter .product img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100px;
+}

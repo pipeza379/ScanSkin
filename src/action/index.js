@@ -7,4 +7,7 @@ export default class Action {
     static SELECTTYPE = "SELECTTYPE"
     static SELECTBRANDS = "SELECTBRANDS"
     static CLEAR = "CLEAR"
+
+    static SELECTSKINTYPE = "SELECTSKINTYPE"
+    static SELECTPROPERTIES = "SELECTPROPERTIES"  
 }

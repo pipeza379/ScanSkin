@@ -1,0 +1,178 @@
+{
+    "SS000001": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater boosting ampoule",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e43\u0e2b\u0e49\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e38\u0e48\u0e21\u0e0a\u0e37\u0e49\u0e19 , \u0e25\u0e14\u0e23\u0e34\u0e49\u0e27\u0e23\u0e2d\u0e22 , \u0e22\u0e01\u0e01\u0e23\u0e30\u0e0a\u0e31\u0e1a",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "25ml",
+        "price": 810.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a Jeju lava seawater effector",
+        "img": "http://www.innisfree.com/th/th/upload/product/23915_l.png"
+    },
+    "SS000002": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater effector Pore ",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e01\u0e23\u0e30\u0e0a\u0e31\u0e1a\u0e23\u0e39\u0e02\u0e38\u0e21\u0e02\u0e19",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "7ml",
+        "price": 190.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a\u0e1a Jeju lava seawater boosting ampoule",
+        "img": "http://220.64.86.129/hk/en/upload/product/23762_l.png"
+    },
+    "SS000003": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater effector Wrinkle ",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e25\u0e14\u0e23\u0e34\u0e49\u0e27\u0e23\u0e2d\u0e22",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "7ml",
+        "price": 190.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a\u0e1a Jeju lava seawater boosting ampoule",
+        "img": "http://220.64.86.129/hk/en/upload/product/23762_l.png"
+    },
+    "SS000004": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater effector Cica  ",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e25\u0e14\u0e23\u0e2d\u0e22\u0e41\u0e14\u0e07\u0e08\u0e32\u0e01\u0e2a\u0e34\u0e27 ",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "7ml",
+        "price": 190.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a\u0e1a Jeju lava seawater boosting ampoule",
+        "img": "http://220.64.86.129/hk/en/upload/product/23762_l.png"
+    },
+    "SS000005": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater effector Brightening",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e01\u0e23\u0e30\u0e08\u0e48\u0e32\u0e07\u0e43\u0e2a",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "7ml",
+        "price": 190.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a\u0e1a Jeju lava seawater boosting ampoule",
+        "img": "http://220.64.86.129/hk/en/upload/product/23762_l.png"
+    },
+    "SS000006": {
+        "brand": "innisfree",
+        "name": "Jeju lava seawater effector Firming",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e22\u0e01\u0e01\u0e23\u0e30\u0e0a\u0e31\u0e1a",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "7ml",
+        "price": 190.0,
+        "using": "",
+        "other": "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e48\u0e27\u0e21\u0e01\u0e31\u0e1a\u0e1a Jeju lava seawater boosting ampoule",
+        "img": "http://220.64.86.129/hk/en/upload/product/23762_l.png"
+    },
+    "SS000007": {
+        "brand": "innisfree",
+        "name": "Bija trouble spot essence ",
+        "type": "\u0e40\u0e2d\u0e2a\u0e40\u0e0b\u0e49\u0e19\u0e0b\u0e4c",
+        "properties": "\u0e25\u0e14\u0e2d\u0e31\u0e01\u0e40\u0e2a\u0e1a",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "15ml",
+        "price": 680.0,
+        "using": "",
+        "other": "",
+        "img": "http://www.innisfree.com/th/th/upload/product/14653_l.png"
+    },
+    "SS000008": {
+        "brand": "innisfree",
+        "name": "Green Tea Seed Eye & Face Ball",
+        "type": "\u0e40\u0e2d\u0e2a\u0e40\u0e0b\u0e49\u0e19\u0e0b\u0e4c (\u0e25\u0e39\u0e01\u0e01\u0e25\u0e34\u0e49\u0e48\u0e07)",
+        "properties": "\u0e43\u0e2b\u0e49\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e38\u0e48\u0e21\u0e0a\u0e37\u0e49\u0e49\u0e19",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "10ml",
+        "price": 740.0,
+        "using": "",
+        "other": "",
+        "img": "https://s3-ap-southeast-1.amazonaws.com/cosmenet.in.th/upload/Maker/MY/Innisfree/innisfree-greenteaseedeyefaceball-1.jpg"
+    },
+    "SS000009": {
+        "brand": "innisfree",
+        "name": "Green barley peeling essence",
+        "type": "\u0e40\u0e2d\u0e2a\u0e40\u0e0b\u0e49\u0e19\u0e0b\u0e4c",
+        "properties": "\u0e1c\u0e25\u0e31\u0e14\u0e40\u0e0b\u0e25\u0e25\u0e4c\u0e1c\u0e34\u0e27",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "50ml ",
+        "price": 840.0,
+        "using": "",
+        "other": "",
+        "img": "http://www.innisfree.com/th/th/upload/product/23328_l.png"
+    },
+    "SS000010": {
+        "brand": "innisfree",
+        "name": "Orchid fluid ",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e43\u0e2b\u0e49\u0e04\u0e27\u0e32\u0e21\u0e0a\u0e38\u0e48\u0e21\u0e0a\u0e37\u0e49\u0e19 , \u0e25\u0e14\u0e23\u0e34\u0e49\u0e27\u0e23\u0e2d\u0e22 , \u0e22\u0e01\u0e01\u0e23\u0e30\u0e0a\u0e31\u0e1a",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "100ml",
+        "price": 850.0,
+        "using": "",
+        "other": "",
+        "img": "http://www.innisfree.com/th/th/upload/product/26699_l.png"
+    },
+    "SS000011": {
+        "brand": "innisfree",
+        "name": "Bija cica balm",
+        "type": "\u0e40\u0e0b\u0e23\u0e31\u0e48\u0e21",
+        "properties": "\u0e25\u0e14\u0e01\u0e32\u0e23\u0e23\u0e30\u0e04\u0e32\u0e22\u0e40\u0e04\u0e37\u0e2d\u0e07",
+        "skin": [
+            "\u0e1c\u0e34\u0e27\u0e41\u0e2b\u0e49\u0e07",
+            "\u0e1c\u0e34\u0e27\u0e21\u0e31\u0e19",
+            "\u0e1c\u0e34\u0e27\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32"
+        ],
+        "quantities": "40ml",
+        "price": 860.0,
+        "using": "",
+        "other": "",
+        "img": "https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/beauty/Innisfree_Bija_cica_balm/Innisfree_Bija_cica_balm_L_1.jpg"
+    }
+}
