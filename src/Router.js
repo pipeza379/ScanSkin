@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { Home, Compare, Review, SelectProducts, Select, Product } from './components'
+import { Home, Compare, Review, SelectProducts, Product } from './components'
 
 import HeadBar from './features/head'
 
@@ -16,7 +16,6 @@ class Rounter extends Component {
           <Route exact path="/selectproducts" component={SelectProducts} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/allproduct" component={Product} />
-          <Route exact path="/select" component={Select} />
         </Switch>
       </div>
     )
