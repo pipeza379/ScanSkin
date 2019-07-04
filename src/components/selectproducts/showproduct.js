@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Filter from '../../features/filter'
 import { connect } from "react-redux"
 import firebase from "../../firebaseDB"
+import Action from "../../action";
 
 const brands = ["innisfree"]
 
@@ -23,7 +24,7 @@ class Product extends Component {
 
   // fetch data from all brands that is skin that you choose
   componentDidMount() {
-    let type = this.props.getProductType.toLowerCase()
+    let type = this.props.getProductsType.toLowerCase()
     if (type !== "") {
       console.log("Fetching")
       let database = firebase.database().ref("brands")
@@ -65,7 +66,7 @@ class Product extends Component {
   }
 
   filterSkin = (sel, products) => {
-    
+
     // products >> {
     //                brand:{id,id,id},
     //                brand:{id,id,id},
@@ -105,6 +106,35 @@ class Product extends Component {
 
   }
 
+  hasIDSelect = (select_product, id) => {
+    //if you was select return false and remove,return true for push product
+    for (let i = 0; i < select_product.length; i++) {
+      if (select_product[i].id === id) {
+        return i
+      }
+    }
+    return -1
+  }
+
+  selectProduct = (e) => {
+    e = e.target
+    let id = e.hasAttribute("id") ? e.getAttribute("id") : e.parentElement.getAttribute("id")
+    let select_product = [...this.props.getProducts]
+    console.log(id)
+    let find = this.hasIDSelect(select_product, id)
+    if (find === -1 && select_product.length < 4) {
+      let brand = e.parentElement.hasAttribute("brand") ? e.parentElement.getAttribute("brand") : e.parentElement.parentElement.getAttribute("brand")
+      let product = this.state.products[brand][id]
+      let index = select_product.length
+      select_product.push({ id, img: product.img, name: product.name, index })
+      this.props.selectProduct(select_product)
+    }
+    else if (find !== -1) {
+      select_product.splice(find, 1)
+      this.props.selectProduct(select_product)
+    }
+  }
+
   createBrand = () => {
     let brandTable = []
     // const brands = this.props.getBrand
@@ -115,16 +145,16 @@ class Product extends Component {
       if (product_from_brand !== undefined) {
         Object.keys(product_from_brand).forEach(id => {
           let product = product_from_brand[id] //product{id:{name:,img:,brand:}}
-          productTable.push(<div className="product" key={id}>
+          productTable.push(<div className="product" key={id} id={id} onClick={this.selectProduct.bind(this)}>
             <img src={product.img} alt={product.brand} />
             <h3>{product.name}</h3>
           </div>
           )
         })
         brandTable.push(
-          <div className="brand-filter" key={brand}>
+          <div className="brand-filter" key={brand} >
             <Filter select={this.selectFilter} title={`${brand} ความต้องการ`} filter={["แบบ OIL", "แบบ CREAM", "แบบ MILK", "แบบเนื้อ JELL", "แบบน้ำ"]} />
-            <div className="product-filter">
+            <div className="product-filter" brand={brand}>
               {productTable}
             </div>
           </div>
@@ -137,21 +167,22 @@ class Product extends Component {
 
   render() {
     return (
-      <>
-        <h1>ผลการค้นหา</h1>
+      <div className="show-select-products">
+        <span className="find">ผลการค้นหา</span>
         {this.createBrand()}
-      </>
+      </div>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-
+  selectProduct: products => dispatch({ type: Action.SELECTPRODUCT, products })
 })
 const mapStateToProps = state => ({
   getBrand: state.compare.select_brand,
-  getProductType: state.compare.select_product_type,
+  getProductsType: state.compare.select_product_type,
   getSkinType: state.compare.select_skin_type,
+  getProducts: state.select.products
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Product);

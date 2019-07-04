@@ -59,7 +59,7 @@ class AllProduct extends Component {
         let x = 1
         products.forEach(d => {
             table.push(
-                <div className={`${name}${x}`} key={x}>
+                <div className={name} key={x}>
                     <img src={d.img} alt="product" style={{ height: "100px" }} />
                     <h6>{d.name}</h6>
                 </div>

@@ -1,7 +1,23 @@
 .select-products {
     display: block;
     margin: auto;
-    width: 1280px;
+    width: 80rem;
+}
+
+.show-products {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.show-products .show-select-products {
+    padding: 1rem;
+    width: 66rem;
+    height: 1500px;
+}
+
+.show-products .side-bar {
+    width: 13rem;
 }
 
 /* HEAD */
@@ -13,18 +29,19 @@ div.title-type {
 
 div.title-type>h1 {
     display: inline-block;
-    margin: 30px;
+    margin: 50px;
     vertical-align: middle;
-    font-family: "Roboto";
-    color: #707070;
+    /* font-family: "Roboto"; */
+    color: #807E7F;
     font-size: 50px;
 }
 
 .line {
     display: inline-block;
-    width: 300px;
-    height: 0px;
-    border: 1px solid #707070;
+    width: 320px;
+    height: 0.15rem;
+    /* border: 1px solid #707070; */
+    background: #707070;
 }
 
 .underline {
@@ -33,9 +50,10 @@ div.title-type>h1 {
 }
 
 .underline span {
+    background: #707070;
     display: inline-block;
-    border: 1px solid #707070;
-    height: 0;
+    /* border: 1px solid #707070; */
+    height: 0.15rem;
     margin: 20px;
 }
 
@@ -48,6 +66,7 @@ div.title-type>h1 {
 
 .brand-filter .filter .select-filter {
     text-align: center;
+    width: 9rem;
 }
 
 /* PRODUCT AFTER FILTER */
@@ -67,4 +86,20 @@ div.title-type>h1 {
     margin: auto;
     width: auto;
     height: 100px;
+}
+
+.find {
+    font-size: 36px;
+    color: black;
+}
+
+/* SIDEBAR */
+
+.side-bar-container {
+    position: -webkit-sticky;
+    margin-top:5rem;
+    position: sticky;
+    padding: 1rem;
+    top: 0;
+    border: 1px solid black;
 }

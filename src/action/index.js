@@ -10,4 +10,6 @@ export default class Action {
 
     static SELECTSKINTYPE = "SELECTSKINTYPE"
     static SELECTPROPERTIES = "SELECTPROPERTIES"  
+
+    static SELECTPRODUCT = "SELECTPRODUCT"
 }
