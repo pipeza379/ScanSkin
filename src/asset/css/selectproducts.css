@@ -71,21 +71,18 @@ div.title-type>h1 {
 
 /* PRODUCT AFTER FILTER */
 
-.product-filter {
-    display: flex;
-    margin: 20px 40px;
-}
-
-.product-filter .product {
-    margin: 10px;
+.product {
+    display: block;
+    margin: auto;
     width: 200px;
+    cursor: pointer;
 }
 
-.product-filter .product img {
+.product img {
     display: block;
     margin: auto;
     width: auto;
-    height: 100px;
+    height: 190px;
 }
 
 .find {

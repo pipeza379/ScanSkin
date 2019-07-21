@@ -13,6 +13,7 @@ class SideBar extends Component {
         console.log(e.target.getAttribute("index"))
         let index = e.target.getAttribute("index")
         select_product.splice(index, 1)
+        select_product.map((item,count)=>item.index=count)
         this.props.setProduct(select_product)
     }
 
