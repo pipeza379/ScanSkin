@@ -3,17 +3,18 @@ import "./carousel.scss";
 import prev from "./asset/prev.svg";
 import next from "./asset/next.svg";
 import { ceil } from "mathjs";
+import Popup from "../popupdetail";
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageNow: 1,
+      pageNow: 1
     };
   }
 
   changePage = state => {
-    let {listItem, amount } = this.props;
-    let page = this.state.pageNow
+    let { listItem, amount } = this.props;
+    let page = this.state.pageNow;
     page =
       page + state >= 1 && page + state <= ceil(listItem.length / amount)
         ? page + state
@@ -32,20 +33,21 @@ class Carousel extends Component {
 
   createItem = () => {
     let item = [];
-    let {listItem, amount } = this.props;
-    let pageNow = this.state.pageNow
+    let { listItem, amount } = this.props;
+    let pageNow = this.state.pageNow;
     for (let i = (pageNow - 1) * amount; i < pageNow * amount; i++) {
-      console.log(i)
+      console.log(i);
       if (i < listItem.length)
         item.push(
           <div className="item" key={`listItem${i}`}>
-            <span>{listItem[i]}</span>
+            <span>
+              {listItem[i]}
+              <Popup data={{ id: listItem[i].props.id}} />
+            </span>
           </div>
         );
-      else{
-        item.push(
-          <div className="item" key={`non-item${i}`}/>
-        )
+      else {
+        item.push(<div className="item" key={`non-item${i}`} />);
       }
     }
     return <div className="item-container">{item}</div>;

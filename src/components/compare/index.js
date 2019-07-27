@@ -1,75 +1,66 @@
-import React, { Component } from "react"
-import { Link} from "react-router-dom"
-import { Row, Col, Typography } from "antd"
-import '../../asset/css/compare.css'
-import props from './props.json'
-import {products} from './data'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import '../../asset/css/compareproduct.scss'
+import properties from './props.json'
+import firebase from '../../firebaseDB'
 
-const { Text } = Typography
-
-class Compare extends Component {
+class CompareProduct extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = { getData: [] }
+  }
+  componentDidMount() {
+    if (this.props.getProducts.length !== 0) {
+      let database = firebase.database().ref('allproducts')
+      database.once('value').then(async snapshot => {
+        let ids = this.props.getProducts.map(product => product.id)
+        let data = []
+        ids.forEach(id => data.push(snapshot.child(`${id}`).val()))
+        this.setState({ getData: data })
+      })
+    }
   }
 
-  compareTable = (data) => {
-    let compare = []
-    for (let x in data[0]) {
-      let col = []
-      for (let i = 0; i < data.length; i++) {
-        col.push(<Col span={6}><Text type="secondary">{data[i][x]}</Text></Col>)
-      }
-      compare.push(
-        <div className={`table-${x}`}>
-          <Row type="flex" justify="center">
-            <Col span={6 * data.length}>
-              <h3 className="title-compare">{props[x]}</h3>
-            </Col>
-          </Row>
-          <div className="information">
-            <Row type="flex" justify="center">
-              {col}
-            </Row>
-          </div>
-          <br />
+  createCompareTable = () => {
+    let table = []
+    Object.keys(properties).forEach(title => {
+      let products = []
+      this.state.getData.forEach(product => {
+        if (title === 'img') {
+          products.push(
+            <img
+              className={`${title}-compare`}
+              src={product[title]}
+              alt="compare"
+            />
+          )
+        } else {
+          products.push(
+            <div className={`${title}-compare`}>{product[title]}</div>
+          )
+        }
+      })
+
+      table.push(
+        <div className="title" key={title}>
+          <div className="title-head">{properties[title]}</div>
+          <div className="show-compare-products">{products}</div>
         </div>
       )
-    }
-    return compare
-  }
-
-  render() {
-    const filterProduct = products.map(product => {
-      let { img, name, rating, type, brand, price, quantities, using } = product
-      // let { brand, price, quantities, skin, using } = description
-      return ({
-        img,
-        brand,
-        rating,
-        name,
-        type,
-        properties: "",
-        using,
-        quantities,
-        price
-      })
     })
-
     return (
-      <React.Fragment>
-        <Row align="middle">
-          <Col span={20} offset={2}>
-            <div className="compare-table">
-              {this.compareTable(filterProduct)}
-            </div>
-            <br/>
-            <button className="btn-other-compare"><Link to="../">เปรียบเทียบสินค้าอื่น</Link></button>
-          </Col>
-        </Row>
-      </React.Fragment>
-    );
+      <>
+        <header>{this.props.getProductsType}</header>
+        <div className="table-compare">{table}</div>
+      </>
+    )
+  }
+  render() {
+    return <div className="compare-products">{this.createCompareTable()}</div>
   }
 }
-
-export default Compare;
+const mapStateToProps = state => ({
+  getProductsType: state.compare.select_product_type,
+  getProducts: state.select.products
+})
+export default connect(mapStateToProps)(CompareProduct)

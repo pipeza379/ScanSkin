@@ -6,7 +6,6 @@ import Action from "../../action";
 import Carousel from "../../features/carousel";
 
 const brands = ["innisfree"];
-
 class Product extends Component {
   constructor(props) {
     super(props);

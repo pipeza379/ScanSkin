@@ -1,5 +1,5 @@
 import React from "react"
-import "../../asset/css/selectproducts.css"
+import "../../asset/css/selectproducts.scss"
 import SelectSkin from "./selectskin"
 import Product from "./showproduct"
 import SideBar from "./sidebar"
